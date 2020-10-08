@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<title>Mis Gustos</title>
+<body>
+   <h1>Jose Contreras</h1> 
+<div>
+    <h2>Mis Bandas Favoritas</h2>
+    <ul>
+        <li v-for="bandas in HeavyMetal">{{bandas}} </li>
+    </ul>
+    <h2>Directores Favoritos</h2>
+    <ul>
+        <li v-for="(director,indice) in directores">
+        {{indice}} : {{director.nombre}} = {{director.edad}} Años </li>
+
+
+    </ul>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+new Vue ({
+    el:'div',
+    data:{
+        HeavyMetal:["Guns and Roses","ozzy osbourne","iron maiden","manowar","metallica",],
+        directores:[
+            {nombre:'Vincent Price',edad:60},
+            {nombre:'Lucio Fulci',edad:70},
+            {nombre:'Jhon Carpenter',edad:67},
+            {nombre:'Mario Baba',edad:68},
+        ],
+
+    }
+})
+   
+</script>
+</body>
+</html>
